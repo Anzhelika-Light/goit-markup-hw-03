@@ -26,16 +26,6 @@
   --logo-font-family: "Raleway", sans-serif;
 }
 
-html {
-    box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-    box-sizing: inherit; 
-}
-
 /* Site nav */
 
 body {
@@ -48,9 +38,12 @@ body {
 
 /* header */
 
-header {
+.header {
     background-color: var(--banner-text-color);
-    border-bottom: 1px solid var(--header-border-bottom);
+    border: 1px solid var(--header-border-bottom);
+    border-top: none;
+    border-right: none;
+    border-left: none;
 }
 
 .container {
@@ -265,8 +258,10 @@ header {
     display: flex;
 }
 
-.activity-img {
-    display: block; 
+.activity-item > img {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 .activity-item {
@@ -309,10 +304,16 @@ header {
     margin-right: 30px;
 }
 
-.teammate-img {
+.teammate > img {
     margin-top: 0;
-    margin-bottom: 30px;
     display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.teammate-content {
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .teammate-name {
@@ -401,8 +402,10 @@ header {
     padding: 20px 24px;
 }
 
-.project-img {
+.project-link > img {
     display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 .project-title {
